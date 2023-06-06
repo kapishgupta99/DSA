@@ -98,7 +98,4 @@
 - Delete Node in a BST  🔥
 - Find a pair with given target in BST
 
-## Weekly Contest (Leetcode)
-- Sort the People
-- Find All Good Indices
-- 2405. Optimal Partition of String
+
