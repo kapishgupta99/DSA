@@ -14,7 +14,7 @@ public:
             }
         }
            
-        digits.push_back(0);
+        digits.push_back(0);   // to tackle (999) case we used this
         digits[0]=1;
         return digits;
         
