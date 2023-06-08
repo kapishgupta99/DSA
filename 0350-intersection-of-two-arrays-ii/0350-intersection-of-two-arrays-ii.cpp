@@ -2,8 +2,8 @@ class Solution {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
         
-       std::unordered_map<int, int> freqMap;
-    std::vector<int> result;
+       unordered_map<int, int> freqMap;
+       vector<int> result;
 
     // Store the frequency of elements in nums1
     for (int num : nums1) {
