@@ -7,8 +7,8 @@ public:
         for(int num:nums) {
             pairSet[num]++;
         }
-        for (auto it : pairSet) {
-        int count = it.second;
+        for (auto num : pairSet) {
+        int count = num.second;
         goodpair += (count * (count - 1)) / 2;
         
     }
