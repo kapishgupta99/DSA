@@ -2,26 +2,34 @@ class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
         
-        unordered_map<int, int> countMap;
-    unordered_set<int> occurrenceSet;
-
-    // Count the occurrences of each number
-    for (int num : arr) {
-        countMap[num]++;
-    }
-
-    // Check if the occurrences are unique
-    for (auto it : countMap) {
-        int occurrence = it.second;
-        if (occurrenceSet.find(occurrence) != occurrenceSet.end()) {
-            return false; // Duplicate occurrence found
+     if(arr.size() == 2){
+            if(arr[0] == arr[1]) return true;
+            else return false;
         }
-        occurrenceSet.insert(occurrence);
-    }
-
-    return true;
-       
-            
+        sort(arr.begin(), arr.end()); 
+        int count=1 ;
+        vector<int> arr2;
+        for (int i = 0; i < arr.size() -1; i++)
+        {
+            if (arr[i] == arr[i + 1])
+            {
+                count++;
+            }
+            else
+            {
+                arr2.push_back(count);
+                count = 1;
+            }
+        }
+        sort(arr2.begin(), arr2.end()); 
+        for (int i = 1; i < arr2.size(); i++)
+        {
+            if (arr2[i] == arr2[i - 1])
+            {
+                return false;
+            }
+        }
+        return true;    
             
            
         
