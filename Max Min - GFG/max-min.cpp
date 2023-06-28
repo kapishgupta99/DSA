@@ -12,7 +12,7 @@ class Solution
    public:
     int findSum(int arr[], int N)
     {
-     std::sort(arr, arr + N);
+     sort(arr, arr + N);
 
     int sum = arr[0] + arr[N - 1];
     return sum;
