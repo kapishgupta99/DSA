@@ -20,7 +20,7 @@ class Solution{
         }
 
         if (sumMap.find(currSum - K) != sumMap.end()) {
-            maxLen = std::max(maxLen, i - sumMap[currSum - K]);
+            maxLen = max(maxLen, i - sumMap[currSum - K]);
         }
 
         if (sumMap.find(currSum) == sumMap.end()) {
