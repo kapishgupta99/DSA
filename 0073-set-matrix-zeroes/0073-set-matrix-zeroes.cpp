@@ -3,8 +3,8 @@ public:
     void setZeroes(vector<vector<int>>& matrix) {
         int row=matrix.size();
         int col=matrix[0].size();
-        set<int>rowZero;
-        set<int>colZero;
+        unordered_set<int>rowZero;
+        unordered_set<int>colZero;
         
         for(int i=0;i<row;i++){
             for(int j=0;j<col;j++){
