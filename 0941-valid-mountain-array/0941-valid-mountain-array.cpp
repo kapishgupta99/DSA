@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool validMountainArray(vector<int>& arr) {
-         int n=arr.size();
+        int n=arr.size();
         int left=0;
         int right =n-1;
         if(n<3){
@@ -19,13 +19,13 @@ public:
     if(left==0 || left==n-1){
         return false;
     }
-        for (int i = 0; i < left; ++i) {
+        for (int i= 0; i < left; i++) {
         if (arr[i] >= arr[i + 1]) {
             return false;
         }
     }
 
-    for (int i = left; i < n - 1; ++i) {
+    for (int i = left; i < n - 1; i++) {
         if (arr[i] <= arr[i + 1]) {
             return false;
         }
